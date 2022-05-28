@@ -1,0 +1,75 @@
+<!-- <div class="banner">
+    <div class="content">
+        <h1>Grocery <br/>At Your Door</h1>
+        <a routerLink="menu">Category<i class="bi bi-arrow-right"></i></a>
+    </div>
+</div> -->
+
+    <div class="banner">
+
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://source.unsplash.com/1300x500/?store,shopping" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item ">
+                <img src="https://source.unsplash.com/1300x500/?store,Grocery" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item ">
+                <img src="https://source.unsplash.com/1300x500/?store,groceries" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+<!-- steps -->
+    <div class="container mt-5 mb-5">
+      <h1 class="text-center mb-3">How to get <span class="highlight">Grocery</span></h1>
+      <div class="row">
+        <!-- one -->
+        <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+            <h1>1</h1>
+            <p>Select Grocery</p>
+          </div>
+        </div>
+        <!-- two -->
+        <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+            <h1>2</h1>
+            <p>Fill the details</p>
+          </div>
+        </div>
+        <!-- three -->
+        <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+            <h1>3</h1>
+            <p>Your order deliver in an Hour</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- GroceryData -->
+<div class="container mt-4 mb-4">
+  <h1 class="text-center">Some <span class="highlight">Grocery Samples</span></h1>
+  <div class="row">
+    <div class="col-lg-3 mt-3" *ngFor="let gd of groceryData; index as i">
+      <div class="grocerybox" *ngIf="i<=3">
+        <img src="{{gd.GroceryImg}}"/>
+        <h1>{{gd.GroceryName}}</h1>
+        <p>{{gd.GroceryPrice|currency:'INR'}}</p>
+      </div>
+    </div>
+  </div>
+  <a routerLink="menu" class="viewmorebtn">View More<i class="bi bi-arrow-right"></i></a>
+</div>   
+
+

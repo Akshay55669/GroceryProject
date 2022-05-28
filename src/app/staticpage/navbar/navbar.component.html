@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Grocery Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="menu" routerLinkActive="active-link">Menu</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="about" routerLinkActive="active-link">AboutUs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="contact" routerLinkActive="active-link">ContactUs</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="login" routerLinkActive="active-link"><i class="bi bi-person-circle"></i></a>
+          </li> -->
+
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <a href="#" target="-blank"><i class="bi bi-cart4 "></i></a>
+        </form>
+        <div class="icon">
+          
+          <a class="nav-link active" routerLink="login" routerLinkActive="active-link"><i class="bi bi-person-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
