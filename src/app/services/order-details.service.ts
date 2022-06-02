@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
-
+import{HttpClient}from '@angular/common/http'
+import { IProduct } from '../iproduct';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderDetailsService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  getData():Observable<IProduct[]>{
+    // getData():Observable<IResult>{
+    let url="http://localhost:3000/data"
+    return this.http.get<IProduct[]>(url);
+    // return this.http.get<IResult>("http://localhost:3000/data");
+    // return this.http.get(url);
+  }
 
 // GroceryDetails
+
 
 groceryData=[
   {

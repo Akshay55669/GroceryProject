@@ -5,71 +5,113 @@
     </div>
 </div> -->
 
-    <div class="banner">
+<div class="banner">
 
-        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://source.unsplash.com/1300x500/?store,shopping" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item ">
-                <img src="https://source.unsplash.com/1300x500/?store,Grocery" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item ">
-                <img src="https://source.unsplash.com/1300x500/?store,groceries" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </div>
-
-<!-- steps -->
-    <div class="container mt-5 mb-5">
-      <h1 class="text-center mb-3">How to get <span class="highlight">Grocery</span></h1>
-      <div class="row">
-        <!-- one -->
-        <div class="col-lg-4 mt-2">
-          <div class="stepBox">
-            <h1>1</h1>
-            <p>Select Grocery</p>
-          </div>
-        </div>
-        <!-- two -->
-        <div class="col-lg-4 mt-2">
-          <div class="stepBox">
-            <h1>2</h1>
-            <p>Fill the details</p>
-          </div>
-        </div>
-        <!-- three -->
-        <div class="col-lg-4 mt-2">
-          <div class="stepBox">
-            <h1>3</h1>
-            <p>Your order deliver in an Hour</p>
-          </div>
-        </div>
+  <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1300x500/?store,shopping" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item ">
+        <img src="https://source.unsplash.com/1300x500/?store,Grocery" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item ">
+        <img src="https://source.unsplash.com/1300x500/?store,groceries" class="d-block w-100" alt="...">
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- steps -->
+<div class="container mt-5 mb-5">
+  <h1 class="text-center mb-3">How to get <span class="highlight">Grocery</span></h1>
+  <div class="row">
+    <!-- one -->
+    <div class="col-lg-4 mt-2">
+      <div class="stepBox">
+        <h1>1</h1>
+        <p>Select Grocery</p>
+      </div>
+    </div>
+    <!-- two -->
+    <div class="col-lg-4 mt-2">
+      <div class="stepBox">
+        <h1>2</h1>
+        <p>Fill the details</p>
+      </div>
+    </div>
+    <!-- three -->
+    <div class="col-lg-4 mt-2">
+      <div class="stepBox">
+        <h1>3</h1>
+        <p>Your order deliver in an Hour</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="delivery">
+  <img src="../../../assets/images/Delivery.jpg">
+
+</div>
 <!-- GroceryData -->
 <div class="container mt-4 mb-4">
-  <h1 class="text-center">Some <span class="highlight">Grocery Samples</span></h1>
+  <h1 class="text-center"><strong>Some </strong> <span class="highlight">Grocery Samples</span></h1>
   <div class="row">
     <div class="col-lg-3 mt-3" *ngFor="let gd of groceryData; index as i">
       <div class="grocerybox" *ngIf="i<=3">
-        <img src="{{gd.GroceryImg}}"/>
+        <img src="{{gd.GroceryImg}}" />
         <h1>{{gd.GroceryName}}</h1>
         <p>{{gd.GroceryPrice|currency:'INR'}}</p>
       </div>
     </div>
   </div>
-  <a routerLink="menu" class="viewmorebtn">View More<i class="bi bi-arrow-right"></i></a>
-</div>   
-
-
+  <!-- <a routerLink="menu" class="viewmorebtn">View More<i class="bi bi-arrow-right"></i></a> -->
+  
+  <!-- static data -->
+  <div class="Container">
+    <div class="row">
+      
+      <div class="col-md-3" id="card">
+        <img class="item-image" src="../../../assets/images/fresh-vegetables.jpg" alt="">
+        <h2>Vegetables</h2>
+        <h3>love to eat Vegetables</h3>
+        <a routerLink="menu" class="Btn">GoToMenu<i class="bi bi-arrow-right"></i></a>
+      </div>
+      
+      <div class="col-md-3" id="card">
+        <img class="item-image" src="../../../assets/images/fruit.jpg" alt="">
+        <h2>Fruits</h2>
+        <h3>love to eat Fruits</h3>
+        <a routerLink="menu" class="Btn">GoToMenu <i class="bi bi-arrow-right"></i></a>
+      </div>
+      
+      <div class="col-md-3" id="card">
+        <img class="item-image" src="../../../assets/images/dailyneeds.png" alt="">
+        <h2>DailyNeeds</h2>
+        <h3>For DailyNeeds Purpose</h3>
+        <a routerLink="menu" class="Btn">GoToMenu <i class="bi bi-arrow-right"></i></a>
+      </div>
+      
+      <div class="col-md-3" id="card">
+        <img class="item-image" src="../../../assets/images/dairyproducts.jpg" alt="">
+        <h2>DairyProducts</h2>
+        <h3>Love to Drink Milk</h3>
+        <a routerLink="menu" class="Btn">GoToMenu<i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+    <br>
+    <!-- <a routerLink="menu" clah3s="viewmorebtn">View More<i class="bi bi-arrow-right"></i></a> -->
+    
+  </div>
+  
+</div>
+  
+  <img class="Offer" src="../../../assets/images/offer.jpg">

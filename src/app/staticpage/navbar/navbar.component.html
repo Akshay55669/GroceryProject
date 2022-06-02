@@ -25,19 +25,28 @@
 
           <!-- <li class="nav-item">
             <a class="nav-link active" routerLink="login" routerLinkActive="active-link"><i class="bi bi-person-circle"></i></a>
-          </li> -->
-
-          
+          </li> --> 
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+        <form class="d-flex" role="search" id="search">
+          <input class="form-control me-1" type="search" placeholder="Search Grocery" aria-label="Search">
           <button class="btn btn-outline-primary" type="submit">Search</button>
-          <a href="#" target="-blank"><i class="bi bi-cart4 "></i></a>
+          <!-- cart -->
+          <!-- <a class="nav-link active" routerLink="cart" routerLinkActive="active-link"><i class="bi bi-cart4 "></i></a> -->
         </form>
+
+        <button style="font-size:1px ;" class="nav-link active" routerLink="cart" class="btn btn-dark ">
+          <!-- <i style="font-size: 10px;" class="fas fa-cart-plus"></i> -->
+          <mat-icon>shopping_cart</mat-icon>
+          <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+        
         <div class="icon">
           
-          <a class="nav-link active" routerLink="login" routerLinkActive="active-link"><i class="bi bi-person-circle"></i></a>
+          <a class="nav-link active" routerLink="login" routerLinkActive="active-link"><mat-icon class="loginicon">account_circle</mat-icon></a>
         </div>
       </div>
     </div>
   </nav>
+
+  <!-- <i class="bi bi-person-circle"></i> -->

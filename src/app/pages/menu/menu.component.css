@@ -1,0 +1,27 @@
+.MenuBox{
+    padding: 10px 5px;
+}
+
+.MenuBox img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: groove;
+    transition: 0.3s ease-in-out;
+
+}
+.MenuBox img:hover{
+    transition: 0.3 ease-in-out ;
+    transform:scale(1.1);
+}
+.MenuBox h1{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.highlight{
+    color:green; 
+    font-weight:bold;
+    font-style: italic;
+}
