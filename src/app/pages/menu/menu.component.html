@@ -77,7 +77,7 @@
  <div class="container mt-4 mb-4">
   <h1 class="text-center"><strong>Some </strong> <span class="highlight">Grocery Products</span></h1>
   <div class="row">
-    <div class="col-lg-3 mt-3" *ngFor="let dt of result">
+    <div class="col-lg-3 mt-3" *ngFor="let dt of result | search:searchKey:'Name'">
       <div class="MenuBox" >
         <img src="{{dt.Image}}"/>
         <h1>{{dt.Name}}</h1>

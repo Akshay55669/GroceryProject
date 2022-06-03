@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import{HttpClientModule} from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,6 +18,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { ForgetPasswordComponent } from './user/forget-password/forget-password.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -32,15 +33,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     RegisterComponent,
     ForgetPasswordComponent,
-    CartComponent
+    CartComponent,
+    SearchPipe
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
 
 
     

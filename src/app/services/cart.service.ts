@@ -9,6 +9,7 @@ export class CartService {
 
 
   public cartItemList:IProduct[]=[]
+  public search=new BehaviorSubject<string>('');
   public productList=new BehaviorSubject<any>([]);
 
   constructor() { }

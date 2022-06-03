@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
 
   result:IProduct[]=[];
   
+  searchKey:string="";
   
   // data:any;
   
@@ -36,7 +37,10 @@ export class MenuComponent implements OnInit {
             Object.assign(a,{quantity:1,total:a.Price})
           })
 
-        });
+        }); 
+this.cartService.search.subscribe((Val:any)=>{
+  this.searchKey=Val;
+})
   }
 
 addtocart(dt:any){

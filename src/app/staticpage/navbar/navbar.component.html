@@ -1,4 +1,6 @@
+<!-- <nav class="navbar navbar-expand-lg bg-dark"> -->
 <nav class="navbar navbar-expand-lg bg-dark">
+
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="">Grocery Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +31,7 @@
         </ul>
 
         <form class="d-flex" role="search" id="search">
-          <input class="form-control me-1" type="search" placeholder="Search Grocery" aria-label="Search">
+          <input class="form-control me-1" type="search" [(ngModel)]="searchTerm"(keyup)="search($event)" placeholder="Search Grocery" aria-label="Search">
           <button class="btn btn-outline-primary" type="submit">Search</button>
           <!-- cart -->
           <!-- <a class="nav-link active" routerLink="cart" routerLinkActive="active-link"><i class="bi bi-cart4 "></i></a> -->
