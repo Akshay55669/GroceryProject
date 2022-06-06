@@ -19,6 +19,7 @@ import { ForgetPasswordComponent } from './user/forget-password/forget-password.
 import { CartComponent } from './pages/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchPipe } from './search.pipe';
+import { CheckOutComponent } from './pages/check-out/check-out.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SearchPipe } from './search.pipe';
     RegisterComponent,
     ForgetPasswordComponent,
     CartComponent,
-    SearchPipe
+    SearchPipe,
+    CheckOutComponent
   ],
   
   imports: [

@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    padding: 0;
+    /* background: url(../../../assets/images/Grocery_Image.jpg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    
+}
+h1{
+    margin: -4px 41px;
+}
+
+.fields p{
+font-weight: bold;
+
+}
+.row {
+    border: groove;
+    width: 25%;
+    height: 60%;
+}
+.button{
+    padding-top: -20px;
+}
+
+/* .checkoutbox {
+    margin: 1em;
+    width: 400px;
+    height: 550px;
+    color: black;
+    top: 48%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+} */
+
+
