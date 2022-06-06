@@ -28,3 +28,13 @@ padding: none;
  margin: none;
  margin-left: none;
 }
+img{
+    height: 55px;
+    margin: -12px;
+}
+.searchicon{
+    position: absolute;
+    z-index: 10;
+    right: 11%;
+    color: blue;
+}

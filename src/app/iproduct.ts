@@ -4,4 +4,5 @@ export interface IProduct {
     Name:String;
     Price:number;
     Image:string;
+    Category:string;
 }

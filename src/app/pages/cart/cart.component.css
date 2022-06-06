@@ -45,3 +45,6 @@ h4, h6{
 .keys button{
     margin-left: none;
 }
+.btn{
+    border: none;
+}

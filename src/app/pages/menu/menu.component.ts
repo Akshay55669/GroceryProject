@@ -12,43 +12,56 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class MenuComponent implements OnInit {
 
-  result:IProduct[]=[];
-  
-  searchKey:string="";
-  
-  // data:any;
-  
-  constructor(private order:OrderDetailsService, private cartService: CartService) { 
+  result: IProduct[] = [];
 
-    
+  public filterCategory:any;
+
+  searchKey: string = "";
+
+
+
+  constructor(private order: OrderDetailsService, private cartService: CartService) {
+
+
   }
 
   ngOnInit(): void {
-    this.order.getData().subscribe((data:IProduct[]) =>{
-      // this.order.getData().subscribe((data) =>{
-        // this.order.getData().subscribe((result:IResult)=>{
-          // this.result=result.data;
-          // console.log(result.data);
-          console.log(data);
-          this.result = data;
+    this.order.getData().subscribe((data: IProduct[]) => {
+    
+      console.log(data);
+      this.filterCategory=data;
+      this.result = data;
 
-          // for cart use------------------------
-          this.result.forEach((a:any)=>{
-            Object.assign(a,{quantity:1,total:a.Price})
-          })
+      // for cart use------------------------
+      this.result.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.Price })
 
-        }); 
-this.cartService.search.subscribe((Val:any)=>{
-  this.searchKey=Val;
-})
+      });
+
+    });
+
+    //  For searchKey
+    this.cartService.search.subscribe((Val: any) => {
+      this.searchKey = Val;
+    });
+  }
+    // for cart
+  addtocart(cart: any) {
+    this.cartService.addtoCart(cart);
   }
 
-addtocart(dt:any){
-  this.cartService.addtoCart(dt);
+  // Category
+  filter(Category:string){
+    this.filterCategory=this.result.filter((a:any)=>{
+      if(a.Category==Category || Category==''){
+        return a;
+      }
+    });
+  }
+
 }
 
 
-}
 
 
 

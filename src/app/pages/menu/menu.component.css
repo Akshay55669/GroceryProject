@@ -25,3 +25,27 @@
     font-weight:bold;
     font-style: italic;
 }
+.item img{
+    width: 81px;
+    height: 61px;
+    margin-top: 5px;
+}
+.item img:hover{
+    transition: 0.3 ease-in-out ;
+    transform:scale(1.1);
+}
+.item h6{
+    font-weight: bold;
+    margin: 6px;
+}
+.item a:hover{
+    color: green;
+}
+.item{
+    margin: 0px 15px;
+    text-align: center;
+    
+}
+.card-top{
+    border-bottom: groove;
+}

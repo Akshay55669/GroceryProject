@@ -61,10 +61,10 @@
 
 .card{
     padding-right: 50%;
-    
     text-decoration: none;
     background-color: chocolate;
     padding: 10px 20px;
+    
 }
 *{
     margin: 0;
@@ -131,13 +131,14 @@ a{
    margin-left: 10px;
 }
 
-#card h2  a{
+#card h2  {
     font-weight: bold;
-    margin-left: 50px;
+    margin: 4px 14px 11px;
 
 }
-#card p{
+#card h4{
     font-weight: bold;
+    margin: 0px 14px 20px;
 }
 .Btn{
     text-decoration: none;
@@ -147,6 +148,15 @@ a{
     border-radius: 5px;
     font-size: 18px;
 
+}
+
+#card img{
+    border-radius: 5px;
+    border: groove;
+
+}
+#card a{
+    margin: 0px 13px;
 }
 
 

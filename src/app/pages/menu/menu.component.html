@@ -1,83 +1,43 @@
-<!-- <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark " style="width: 200px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi pe-none " width="15" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="fs-2">Categories</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-          View All
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+        <a (click)="filter('')">
+          <img src="../../../assets/images/AllProduct.jpg" alt="AllProduct">
+          <h6>All Product</h6>
         </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-          Fruits & Vegetables
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-          Oils & Masala
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-          Snacks & Juice
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Cleaning & HouseHold
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Baby Care
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Daily Need
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Pets Food
-        </a>
-      </li>
-      <li><hr class="dropdown-divider"></li>
-    </ul>
-</div> -->
+    </div>
+    <div class="item">
+      <a (click)="filter('Vegetables')">
+        <img src="../../../assets/images/fresh-vegetables.jpg" alt="Vegetables">
+        <h6>Vegetables</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('Fruits')">
+        <img src="../../../assets/images/fruit.jpg" alt="Fruits">
+        <h6>Fruits</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('DailyNeeds')">
+        <img src="../../../assets/images/dailyneeds.png" alt="dailyneeds">
+        <h6>DailyNeeds</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('DairyProducts')">
+        <img src="../../../assets/images/dairyproducts.jpg" alt="DairyProducts">
+        <h6>DairyProducts</h6>
+      </a>
+    </div>
+  </div>
+</div>
 
-
-    <!-- <div class="card" style="width: 14rem;">
-        <img src="../../../assets/images/colgate.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Colgate</h5>
-          <a href="#" class="btn btn-primary">Buy</a>&nbsp;
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div> -->
 
  <div class="container mt-4 mb-4">
   <h1 class="text-center"><strong>Some </strong> <span class="highlight">Grocery Products</span></h1>
   <div class="row">
-    <div class="col-lg-3 mt-3" *ngFor="let dt of result | search:searchKey:'Name'">
+    <div class="col-lg-3 mt-3" *ngFor="let dt of filterCategory | search:searchKey:'Name'">
       <div class="MenuBox" >
         <img src="{{dt.Image}}"/>
         <h1>{{dt.Name}}</h1>
@@ -92,19 +52,5 @@
 
 
 
-<!-- <div class="card" style="width: 14rem;">
 
-        <img src="../../../assets/images/colgate.jpg" class="card-img-top" alt="...">
-
-        <div class="card-body">
-
-          <h5 class="card-title">Colgate</h5>
-
-          <a href="#" class="btn btn-primary">Buy</a>&nbsp;
-
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-
-        </div>
-
-    </div> -->
     
