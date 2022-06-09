@@ -11,16 +11,19 @@ export class OrderDetailsService {
   constructor(private http:HttpClient) { }
 
   getData():Observable<IProduct[]>{
-    // getData():Observable<IResult>{
     let url="http://localhost:3000/data"
     return this.http.get<IProduct[]>(url);
-    // return this.http.get<IResult>("http://localhost:3000/data");
-    // return this.http.get(url);
   }
 
+  // postData(data:any){
+  //   let url="http://localhost:3000/data"
+  //   return this.http.post(this.url,data)
+  // }
+
+
+
+
 // GroceryDetails
-
-
 groceryData=[
   {
   id:1,

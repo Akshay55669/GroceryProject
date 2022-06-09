@@ -48,5 +48,31 @@ app.get('/data', (req, res) => {
         .catch(err => console.log(err, 'errs'));
 });
 
+// post User Data
+app.post('/data', (req, res) => {
+    let qr = `Select * from public."Grocery"`
+    db
+        .query({
+            text: qr
+        })
+        .then(result => {
+            
+            var data1 = []; 
+            for (var i = 0; i < result.rows.length; i++) {
+                data1.push({
+                    Id: result.rows[i].Id,
+                    Name: result.rows[i].Name,
+                    Price: result.rows[i].Price,
+                    Image: result.rows[i].Image,
+                    Category:result.rows[i].Category
+                });
+            }
+            res.send(
+                data1
+            );
+        })
+        .catch(err => console.log(err, 'errs'));
+});
+
 
 

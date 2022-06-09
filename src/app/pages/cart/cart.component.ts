@@ -10,45 +10,50 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
 
 
-  public product:any=[];
-  public grandTotal!:number;
+  public product: any = [];
+  public grandTotal!: number;
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
 
-    this.cartService.getProducts().subscribe(res=>{
-      this.product=res;
-      this.grandTotal=this.cartService.getTotalPrice();
+    this.cartService.getProducts().subscribe(res => {
+      this.product = res;
+      this.grandTotal = this.cartService.getTotalPrice();
     })
   }
 
-  removeItem(item:IProduct){
-this.cartService.removeCartItem(item)
+  removeItem(item: IProduct) {
+    this.cartService.removeCartItem(item)
   }
 
-  emptycart(){
+  emptycart() {
     this.cartService.removeAllCart();
   }
-  
-  calculatePrice(){
-    this.grandTotal=this.cartService.getTotalPrice();
+
+  calculatePrice() {
+    this.grandTotal = this.cartService.getTotalPrice();
   }
 
 
-  plus(product:any){
-    
-    if(product.quantity!=5)
-    product.quantity+=1;
-    this.cartService.addtoCart(product);
+  plus(Id:any, quantity:any){
+    for (let i = 0; i < this.product.length; i++){
+      if (this.product[i].Id === Id){
+        if (quantity != 5) {
+          this.product[i].quantity = parseInt(quantity)+1;
+        }
+      }
     }
-  
+  }
 
-  minus(product:any){
-   if(product.quantity!=1)
-    product.quantity-=1;
-    this.cartService.removeCartItem(product);
-    
+  minus(Id:any, quantity:any){
+    for(let i =0; i<this.product.length;i++){
+      if(this.product[i].Id===Id){
+        if(quantity!=1){
+        this.product[i].quantity=parseInt(quantity)-1;
+        }
+      }
+    }
   }
 
 
