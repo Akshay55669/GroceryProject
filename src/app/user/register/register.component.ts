@@ -26,4 +26,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  RegisterPage(data:any){
+console.log(data);
+  }
+
 }

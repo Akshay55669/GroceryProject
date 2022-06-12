@@ -6,6 +6,7 @@ import { CheckOutComponent } from './pages/check-out/check-out.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { ThankyouComponent } from './pages/thankyou/thankyou.component';
 import { ForgetPasswordComponent } from './user/forget-password/forget-password.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
 {path:'register',component:RegisterComponent},
 {path:'forgetpassword',component:ForgetPasswordComponent},
 {path:'cart',component:CartComponent},
-{path:'checkout',component:CheckOutComponent}
+{path:'checkout',component:CheckOutComponent},
+{path:'thankyou',component:ThankyouComponent}
   
 ];
 

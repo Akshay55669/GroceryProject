@@ -20,6 +20,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchPipe } from './search.pipe';
 import { CheckOutComponent } from './pages/check-out/check-out.component';
+import { ThankyouComponent } from './pages/thankyou/thankyou.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CheckOutComponent } from './pages/check-out/check-out.component';
     ForgetPasswordComponent,
     CartComponent,
     SearchPipe,
-    CheckOutComponent
+    CheckOutComponent,
+    ThankyouComponent
   ],
   
   imports: [

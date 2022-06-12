@@ -2,15 +2,15 @@
     <div class="Registerbox">
         <img src="../../../assets/images/Avtar.jpg" alt="Logo" class="Image">
         <h1>Register Here</h1>
-        <form>
+        <form #register="ngForm" (ngSubmit)="RegisterPage(register.value)">
             <p>Name</p>
-            <input type="text" name="name" placeholder="Enter Your Name" required>
+            <input type="text" name="name" ngModel placeholder="Enter Your Name" required>
             <p>Email</p>
-            <input type="text" name="email" placeholder="Enter Your Email" required>
+            <input type="text" name="email" ngModel placeholder="Enter Your Email" required>
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password" required>
+            <input type="password" name="password" ngModel placeholder="Enter Password" required>
             <p>MobileNo</p>
-            <input type="text" name="number" placeholder="Enter MobileNo" required>
+            <input type="text" name="number" ngModel placeholder="Enter MobileNo" required>
             <input type="submit" name="submit" value="Register">    
         </form>
 

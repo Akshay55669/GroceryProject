@@ -17,6 +17,8 @@ export class MenuComponent implements OnInit {
   public filterCategory:any;
 
   searchKey: string = "";
+  showMsg=false;
+  showErrMsg=false;
 
 
 
@@ -47,7 +49,20 @@ export class MenuComponent implements OnInit {
   }
     // for cart
   addtocart(cart: any) {
+    if(!this.cartService.cartItemList.includes(cart)){
     this.cartService.addtoCart(cart);
+    this.showMsg=true;
+    setTimeout(()=>{this.showMsg=false},1000)
+    }
+    else if(!this.cartService.hasReachedMaxQuantity(cart)){
+      this.cartService.incrementQuantity(cart);
+      this.showMsg=true;
+      setTimeout(()=>{this.showMsg=false},1000)
+    }
+    else{
+      this.showErrMsg=true;
+      setTimeout(()=>{this.showErrMsg=false},1000)
+    }
   }
 
   // Category

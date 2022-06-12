@@ -1,0 +1,45 @@
+.card{
+
+    height: 60vh;
+
+    margin-top: 30px;
+
+    margin-left: 291px;
+
+    margin-right: 300px;
+
+    padding: 20px;
+
+}
+
+.center{
+
+    position: absolute;
+
+    top:47%;
+
+    left:50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+}
+
+h1{
+
+    font-weight: bold;
+
+}
+
+img{
+
+    margin-top: auto;
+
+}
+
+h2{
+
+    color: darkgoldenrod;
+
+}

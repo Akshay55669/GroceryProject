@@ -49,29 +49,24 @@ app.get('/data', (req, res) => {
 });
 
 // post User Data
-app.post('/data', (req, res) => {
-    let qr = `Select * from public."Grocery"`
+app.post('/order', (req, res) => {
+    const data= req.body;
+    
+    let qr = `INSERT INTO public."Shipping"(Fname,Lname,Address,City,Pincode,MobileNo,Email,ShipAddress)
+     VALUES('$(data.Fname)','$(data.Lname)','$(data.Address)','$(data.city)','$(data.Pincode)',
+     '$(data.MobileNo)','$(data.Email)','$(data.ShipAddress)')`
+
     db
         .query({
             text: qr
         })
-        .then(result => {
+        .then(res => {
+            console.log(res.rows[0])
             
-            var data1 = []; 
-            for (var i = 0; i < result.rows.length; i++) {
-                data1.push({
-                    Id: result.rows[i].Id,
-                    Name: result.rows[i].Name,
-                    Price: result.rows[i].Price,
-                    Image: result.rows[i].Image,
-                    Category:result.rows[i].Category
-                });
-            }
-            res.send(
-                data1
-            );
         })
-        .catch(err => console.log(err, 'errs'));
+        // .catch(err => console.log(err, 'errs'));
+        .catch(e => console.error(e.stack))
+
 });
 
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderDetailsService } from 'src/app/services/order-details.service';
+import { CartService } from 'src/app/services/cart.service';
+
+
 
 @Component({
   selector: 'app-check-out',
@@ -8,16 +10,28 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
 })
 export class CheckOutComponent implements OnInit {
 
-  constructor( private order:OrderDetailsService) { }
+  public product: any;
+  public grandTotal!: number;
+ 
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cartService.getProducts().subscribe(res => {
+      this.product = res;
+    this.grandTotal = this.cartService.getTotalPrice();
+    });
   }
 
+  ShippingData(data: any) {
+    alert("data save in console");
+    console.log(data);
+  }
 
   // getShippingFormData(data:any){
   //   this.order.postData(data).subscribe((result)=>{
   //     console.log(result);
-
   //   });
   // }
+  
 }

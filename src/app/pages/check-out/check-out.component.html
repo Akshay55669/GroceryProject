@@ -1,144 +1,65 @@
-<!-- <div class="container fields">
-            <h1>CheckOut Here</h1>
-            <form >
-            <form #shippingForm="ngForm" (ngSubmit)="getShippingFormData(shippingForm.value)">
-
-                <div class="row">
-                    <div>
-                        <p>Name</p>
-                        <input type="text" name="name" ngModel placeholder="Enter Your Name" required>
-                    </div>
-                    <div>
-                        <p>Email</p>
-                        <input type="text" name="email" ngModel placeholder="Enter Your Email" required>
-                    </div>
-                    <div>
-                        <p>MobileNo</p>
-                        <input type="text" name="number" ngModel placeholder="Enter MobileNo" required>
-                    </div>
-                    <div>
-                        <p>Address</p>
-                        <input type="text" name="address" ngModel placeholder="Enter Address" required>
-                    </div>
-                    <div>
-                        <p>City</p>
-                        <input type="text" name="city" ngModel placeholder="Enter City" required>
-                    </div>
-                    <div>
-                        <p>State</p>
-                        <input type="text" name="state" ngModel placeholder="Enter State" required>
-                    </div>
-                    <div>
-                        <p>PinCode</p>
-                        <input type="text" name="pincode" ngModel placeholder="Enter PinCode" required><br/> <br/>   
-                    </div>
-                    <div class="button">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Place order">    
-                    </div>
-                </div>
-            </form>
-        </div> -->
-
-
-
 <div class="white-space"></div>
 <div class="wrapper">
 
     <div class="row">
-        <form>
+        <form #shipping="ngForm" (ngSubmit)="ShippingData(shipping.value)">
             <div class="col-7 col">
                 <h3 class="topborder"><span>Billing Details</span></h3>
-                <!-- <label for="country">Country</label>
-        <select name="country" id="country" required>
-          <option value="">Please select a country</option>
-          <option value="India">India/option>
-          <option value="Not India">Not India</option>
-        </select> -->
+                
                 <div class="width50 padright">
                     <label for="fname">First Name</label>
-                    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+                    <input type="text" name="fname" id="fname" ngModel placeholder="Enter your first name" required>
                 </div>
                 <div class="width50">
                     <label for="lname">Last Name</label>
-                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+                    <input type="text" name="lname" id="lname" ngModel placeholder="Enter your last name" required>
                 </div>
-                <!-- <label for="company">Company Name</label>
-        <input type="text" name="company" id="company"  placeholder="Enter your company name" required> -->
                 <label for="address">Address</label>
-                <input type="text" name="address" id="address" placeholder="Enter your address" required>
-                <input type="text" name="address" id="address2" placeholder="Optional">
+                <input type="text" name="address" id="address" ngModel placeholder="Enter your address" required>
+                <input type="text" name="address" id="address2" ngModel placeholder="Optional">
                 <label for="city">Town / City</label>
-                <input type="text" name="city" id="city" placeholder="Enter your city " required>
-                <!-- <div class="width50 padright">
-          <label for="province">Province</label>
-          <select name="province" id="province" required>
-            <option value="">Please select a province</option>
-
-            <option value="in">India</option>
-            <option value="not-india">Not India</option>
-          </select>
-        </div> -->
+                <input type="text" name="city" id="city" ngModel placeholder="Enter your city " required>
+                
                 <div class="width50">
-                    <label for="pincode">Postcode</label>
-                    <input type="text" name="pincode" id="pincode" placeholder="Pincode / Zip" required>
+                    <label for="pincode">Pincode</label>
+                    <input type="text" name="pincode" id="pincode" ngModel placeholder="Pincode / Zip" required>
                 </div>
                 <div class="width50 padright">
                     <label for="Mobile">Mobile no</label>
-                    <input type="text" name="Mobile" id="Mobile" placeholder="Enter mobile no.">
+                    <input type="text" name="Mobile" id="Mobile" ngModel placeholder="Enter mobile no.">
                 </div>
                 <div class="width:17px">
                     <label for="email">Email Address</label>
-                    <input type="text" name="email" id="email" placeholder="Enter email-id">
+                    <input type="text" name="email" id="email" ngModel placeholder="Enter email-id">
                 </div>
                 <!-- <input type="checkbox" value="2" name="checkbox"><p>Create an account?</p> -->
                 <div class="width:17px">
                     <label for="address">Shipping Address</label>
-                    <input type="text" name="address" id="email" placeholder="Enter your delivery address">
+                    <input type="text" name="address" id="email" ngModel placeholder="Enter your delivery address">
                 </div>
                 <!-- <label for="notes" class="notes">Order Notes</label>
-        <textarea name="notes" id="notes" placeholder="Notes about your order, e.g. special notes for delivery."></textarea> -->
+                <textarea name="notes" id="notes" placeholder="Notes about your order, e.g. special notes for delivery."></textarea> -->
             </div>
 
             <div class="col-5 col order">
-                <h3 class="topborder"><span>Your Order</span></h3>
+                <h3 class="topborder"><span>Your Order Item</span></h3>
+                <tr *ngFor="let list of product; let i= index">
+                    <td>{{i+1}}.</td>
+                    <td>{{list.Name}}</td>
+                </tr>
                 <div class="row">
-                    <h4 class="inline">Product Total</h4>
+                    <h4 class="inline">Item Total</h4>{{grandTotal|currency:'INR'}}
                 </div>
-                <div>
-                    <!-- <p class="prod-description inline"><div class="qty inline"><span class="smalltxt">x</span>{{totalItem}}</div> -->
-
-                </div>
-                <!-- <div><h5>Cart Subtotal</h5>{{grandTotal|currency:'INR'}}</div> -->
                 <div>
                     <h5 class="inline difwidth">Shipping and Handling</h5>
                     <p class="inline alignright center">Free Shipping</p>
                 </div>
-                <!-- <div><h5>Order Total</h5>{{grandTotal|currency:'INR'}}</div> -->
-
-                <!-- <div>
-                    <h3 class="topborder"><span>Payment Method</span></h3>
-                    <input type="radio" value="banktransfer" name="payment" checked>
-                    <p>Direct Bank Transfer</p>
-                    <p class="padleft">
-                        Make your payment directly into our bank account. Please use your Order ID as the payment
-                        reference. Your order won't be shipped until the funds have cleared in our account.
-                    </p>
-                </div>
-
-                <div><input type="radio" value="cheque" name="payment">
-                    <p>Cheque Payment</p>
-                </div>
                 <div>
-                    <input type="radio" value="paypal" name="payment">
-                    <p>UPI ID:</p>
-                    <fieldset class="paymenttypes">
-
-                    </fieldset>
-                    <a href="#" class="padleft"></a>
-                </div> -->
-
-                <button class="place-order" routerLink="/thankyou">Place Order</button>
-
+                    <h5>Total Amount</h5>{{grandTotal|currency:'INR'}}
+                </div>
+              
+                <button class="place-order">Place Order</button>
+                <!-- <button class="place-order" routerLink="/thankyou">Place Order</button> -->
             </div>
         </form>
     </div>
